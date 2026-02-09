@@ -77,8 +77,9 @@ jobs:
         run: npm ci
 
       - name: Build + upload Tauri bundles
-        # tauri-apps/tauri-action uses tags like `action-v0.x.y` (no `v1` tag).
-        uses: tauri-apps/tauri-action@action-v0.6.1
+        # NOTE: `tauri-apps/tauri-action@v1` is referenced in some docs, but the repo's release tags
+        # are currently `action-v0.x.y`. Pin to a known-good tag to avoid "unable to find version" errors.
+        uses: tauri-apps/tauri-action@action-v0.6.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
