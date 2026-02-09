@@ -32,7 +32,7 @@ pub struct Args {
 	#[arg(short, long)]
 	pub output: Option<PathBuf>,
 
-	/// Model name (currently: u2netp, u2net).
+	/// Model name (see `rembg-rs/src/model.rs` for the supported list).
 	#[arg(short = 'm', long, default_value = "u2netp")]
 	pub model: String,
 

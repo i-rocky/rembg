@@ -1,7 +1,21 @@
-# Tauri + SvelteKit + TypeScript
+# rembg-app
 
-This template should help get you started developing with Tauri, SvelteKit and TypeScript in Vite.
+Tauri v2 desktop GUI for `rembg-rs` with a SvelteKit UI.
 
-## Recommended IDE Setup
+## Run (Dev)
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
+From this folder:
+
+1. `npm install`
+2. `npm run tauri dev`
+
+## What It Does
+
+- Lets you drop/select an input image.
+- Shows output PNG with a checkerboard background.
+- Exposes model/device/options and re-runs on changes.
+- Shows download progress while fetching runtime/model files.
+
+## Backend
+
+Tauri commands are implemented in `rembg-app/src-tauri/src/lib.rs` and call into the `rembg-rs` crate.
