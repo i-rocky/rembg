@@ -1,0 +1,39 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log
+
+# Rust
+/target/
+**/target/
+**/*.rs.bk
+
+# Node / web
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.svelte-kit/
+**/.svelte-kit/
+.vite/
+**/.vite/
+
+# Tauri builds
+src-tauri/target/
+**/src-tauri/target/
+
+# Local env / secrets
+.env
+.env.*
+
+# App caches (models / runtimes)
+# Keep the code that downloads these, but don't commit the downloaded artifacts.
+cache/
+**/cache/
+
