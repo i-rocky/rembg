@@ -77,7 +77,8 @@ jobs:
         run: npm ci
 
       - name: Build + upload Tauri bundles
-        uses: tauri-apps/tauri-action@v1
+        # tauri-apps/tauri-action uses tags like `action-v0.x.y` (no `v1` tag).
+        uses: tauri-apps/tauri-action@action-v0.6.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
